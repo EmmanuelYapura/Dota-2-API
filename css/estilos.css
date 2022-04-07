@@ -4,6 +4,11 @@
     text-align: center;
 }
 
+header h1{
+    color: white;
+    margin-top: 50px;
+}
+
 .informacion{
     display: block;
 }
