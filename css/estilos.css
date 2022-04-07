@@ -93,9 +93,12 @@ button:hover{
     font-size: 16px;
     font-weight: bold;
 }
+
 .stats{
     display: flex;
     justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 img{
@@ -104,5 +107,15 @@ img{
 }
 
 body{
-    background-color: gray;
+    background-image: url(./imagenes/fondo-dota3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.destacados{
+    display: none;
+    box-shadow: 0 3px 13px 1px  rgb(247, 247, 247);
+    width: 240px;
+    margin: auto;
+    padding-top: 1px;
 }
