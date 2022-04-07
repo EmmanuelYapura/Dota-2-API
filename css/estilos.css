@@ -48,7 +48,9 @@ button{
 
 .controles{
     display: flex;
+    flex-direction: row;
     align-items: flex-end;
+    justify-content: flex-end;  
 }
 
 .card{
