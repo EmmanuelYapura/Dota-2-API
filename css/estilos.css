@@ -19,6 +19,7 @@ header h1{
 }
 
 .tablero{
+    margin-top: 10px;
     width: 100%;
     height: 100%;
     display: none;
