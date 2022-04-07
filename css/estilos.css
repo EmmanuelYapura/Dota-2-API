@@ -63,6 +63,8 @@ button:hover{
     width: 150px;
     height: 250px;
     border: 1px solid black;
+    color: white;
+    box-shadow: 0 3px 13px 1px  rgb(247, 247, 247);
 }
 
 .icon-hero{
