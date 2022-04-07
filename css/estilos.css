@@ -77,11 +77,6 @@ button:hover{
     margin: auto;
 }
 
-.card-text{
-    margin-top: 5px;
-    word-wrap: break-word
-}
-
 .card-body{
     display: flex;
     justify-content: center;
