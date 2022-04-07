@@ -11,6 +11,11 @@ header h1{
 
 .informacion{
     display: block;
+    font-weight: bold;
+    color:rgba(247, 230, 230, 0.945);
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: Lato, sans-serif;
 }
 
 .tablero{
