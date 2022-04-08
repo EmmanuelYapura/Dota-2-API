@@ -37,3 +37,28 @@ function genedadorArrayIds(){
 function generadorIdHeroe(){
     return Math.floor(Math.random() * 124)
 }
+
+async function cargaDatos(heroe,id){
+    const img = document.getElementById(`img-hero-${id}`)
+    img.src = `${url}${heroe.img}`
+
+    const icon = document.getElementById(`icon-hero-${id}`)
+    icon.src = `${url}${heroe.icon}`
+
+    const nombre = document.getElementById(`nombre-hero-${id}`)
+    nombre.innerHTML = heroe.localized_name
+
+    const baseAgi = document.getElementById(`base-agi-${id}`)
+    baseAgi.innerText = `Agi: ${heroe.base_agi}`
+
+    const baseInt = document.getElementById(`base-int-${id}`)
+    baseInt.innerText = `Int: ${heroe.base_int}`
+
+    const baseStr = document.getElementById(`base-str-${id}`)
+    baseStr.innerText = `Str: ${heroe.base_str}`
+
+    const baseAttack = document.getElementById(`base-attack-${id}`)
+    baseAttack.innerText = `${heroe.attack_type} [${heroe.base_attack_min}-${heroe.base_attack_max}]`
+
+
+}
