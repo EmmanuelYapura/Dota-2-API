@@ -12,4 +12,13 @@ async function getFetch(link) {
 
 async function obtenerHeroes( ){
     let heroes = await getFetch(`${url}/api/heroStats`)
+    cargaTablero(heroes)
 }
+
+function cargaTablero(heroes){
+    let arrayIdsAleatorios = genedadorArrayIds()
+    for (let i = 0; i < 10; i++) {
+        cargaDatos(heroes[arrayIdsAleatorios[i]],i+1)    
+    }
+}
+
