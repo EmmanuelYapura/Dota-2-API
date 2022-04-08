@@ -66,3 +66,7 @@ async function cargaDatos(heroe,id){
     textoKDA.innerHTML = generadorKDA()
 
 }
+
+function retardo(time = 2000){
+    return new Promise (resolve => setTimeout(resolve, time))
+}
