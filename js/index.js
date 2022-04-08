@@ -60,5 +60,9 @@ async function cargaDatos(heroe,id){
     const baseAttack = document.getElementById(`base-attack-${id}`)
     baseAttack.innerText = `${heroe.attack_type} [${heroe.base_attack_min}-${heroe.base_attack_max}]`
 
+    const textoKDA = document.querySelector(`.card-results-${id} p`)
+    textoKDA.innerHTML = 'Cargando k/d/a...'
+    await retardo()
+    textoKDA.innerHTML = generadorKDA()
 
 }
