@@ -70,3 +70,12 @@ async function cargaDatos(heroe,id){
 function retardo(time = 2000){
     return new Promise (resolve => setTimeout(resolve, time))
 }
+
+function generadorKDA(){
+    let k = Math.floor(Math.random() * 30)
+    let d = Math.floor(Math.random() * 22)
+    let a = Math.floor(Math.random() * 30)
+    const texto = `${k} / ${d} / ${a}`  
+
+    return texto
+}
