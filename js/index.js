@@ -22,3 +22,14 @@ function cargaTablero(heroes){
     }
 }
 
+function genedadorArrayIds(){
+    let array = []
+    for (let i = 0; i < 10; i++) { 
+        let id = generadorIdHeroe()
+        if(array.includes(id)){
+            id = id + 1
+        }
+        array.push(id)
+    }
+    return array
+}
