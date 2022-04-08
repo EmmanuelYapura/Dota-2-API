@@ -33,3 +33,7 @@ function genedadorArrayIds(){
     }
     return array
 }
+
+function generadorIdHeroe(){
+    return Math.floor(Math.random() * 124)
+}
