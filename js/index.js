@@ -9,3 +9,7 @@ async function getFetch(link) {
         console.error("Hubo un error en la peticion: ", error)
     }
 }
+
+async function obtenerHeroes( ){
+    let heroes = await getFetch(`${url}/api/heroStats`)
+}
