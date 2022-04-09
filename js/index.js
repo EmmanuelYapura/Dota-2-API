@@ -122,7 +122,7 @@ function generadorTiempoDeJuego(){
 }
 
 function elegirHeroesDestacados(ganador){
-    const cartasHeroes = document.querySelectorAll(`.team-${ganador} .card`) /* los 5 divs del ganador */
+    const cartasHeroes = document.querySelectorAll(`.team-${ganador} .card`)
     let mvpId = generadorMvp()
 
     const mvp = {
@@ -155,6 +155,10 @@ function elegirHeroesDestacados(ganador){
 
     $div.appendChild(contenedor)
 
+}
+
+function generadorMvp(){
+    return Math.floor(Math.random() * 5)
 }
 
 function obtenerGanador(){
