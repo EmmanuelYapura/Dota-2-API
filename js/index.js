@@ -125,13 +125,24 @@ const btnJugar = document.getElementById('jugar')
 const btnEstadisticas = document.getElementById('estadisticas')
 btnEstadisticas.disabled = true
 
+async function habilitarBotonEstadisticas(){
+    await retardo(3000)
+    btnEstadisticas.disabled = false
+}
+
+function deshabilitarBotonEstadisticas(){
+    btnEstadisticas.disabled = true
+}
+
 btnJugar.addEventListener('click', () => {
     ocultarEstadisticas()
     mostrarTablero()
     obtenerHeroes()
+    habilitarBotonEstadisticas()
 })
 
 
 btnEstadisticas.addEventListener('click', () => {
     ocultarTablero()
+    deshabilitarBotonEstadisticas()
 })
