@@ -117,6 +117,10 @@ function mostrarEstadisticas(estadisticas){
     elegirHeroesDestacados(estadisticas.ganador)
 }
 
+function generadorTiempoDeJuego(){
+    return Math.ceil(Math.random() * 60)
+}
+
 const btnJugar = document.getElementById('jugar')
 const btnEstadisticas = document.getElementById('estadisticas')
 btnEstadisticas.disabled = true
