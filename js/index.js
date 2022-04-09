@@ -179,6 +179,15 @@ function obtenerGanador(){
     return estadisticas
 }
 
+function analizaEstadisticas(id){
+    let estadisticas = document.querySelector(`.card-results-${id} p`).textContent.split('/')
+    const k = Number(estadisticas[0])
+    const d = Number(estadisticas[1])
+    let dif = k - d
+    
+    return  dif
+}
+
 const btnJugar = document.getElementById('jugar')
 const btnEstadisticas = document.getElementById('estadisticas')
 btnEstadisticas.disabled = true
