@@ -157,6 +157,28 @@ function elegirHeroesDestacados(ganador){
 
 }
 
+function obtenerGanador(){
+    let estadisticas = {
+        killsRadiant: 0,
+        killsDire: 0,
+    }
+
+    for (let i = 1; i <= 5; i++) {
+        estadisticas.killsRadiant = estadisticas.killsRadiant + analizaEstadisticas(i)
+    }
+    for (let i = 6; i <= 10; i++) {
+        estadisticas.killsDire = estadisticas.killsDire + analizaEstadisticas(i)
+    }
+    
+    if(estadisticas.killsRadiant < 0) estadisticas.killsRadiant = Math.abs(estadisticas.killsRadiant)
+    
+    if(estadisticas.killsDire < 0) estadisticas.killsDire = Math.abs(estadisticas.killsDire)
+
+    estadisticas.killsRadiant > estadisticas.killsDire? estadisticas.ganador = 'radiant' : estadisticas.ganador ='dire' 
+
+    return estadisticas
+}
+
 const btnJugar = document.getElementById('jugar')
 const btnEstadisticas = document.getElementById('estadisticas')
 btnEstadisticas.disabled = true
@@ -181,4 +203,6 @@ btnJugar.addEventListener('click', () => {
 btnEstadisticas.addEventListener('click', () => {
     ocultarTablero()
     deshabilitarBotonEstadisticas()
+    let ganador = obtenerGanador()
+    mostrarEstadisticas(ganador)
 })
