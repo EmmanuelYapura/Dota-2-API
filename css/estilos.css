@@ -102,7 +102,7 @@ img{
 }
 
 body{
-    background-image: url(./imagenes/fondo-dota3.jpg);
+    background-image: url(/imagenes/fondo-dota3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
