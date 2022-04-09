@@ -184,8 +184,13 @@ function analizaEstadisticas(id){
     const k = Number(estadisticas[0])
     const d = Number(estadisticas[1])
     let dif = k - d
-    
+
     return  dif
+}
+
+function eliminarElementos() {
+    const nodo = document.querySelector('.card-mvp');
+    if(nodo) nodo.remove()    
 }
 
 const btnJugar = document.getElementById('jugar')
@@ -202,6 +207,7 @@ function deshabilitarBotonEstadisticas(){
 }
 
 btnJugar.addEventListener('click', () => {
+    eliminarElementos()
     ocultarEstadisticas()
     mostrarTablero()
     obtenerHeroes()
