@@ -91,11 +91,38 @@ function ocultarTablero(){
     tablero.style.display = 'none'
 }
 
+function ocultarEstadisticas(){
+    const div = document.querySelector('.informacion')
+    div.style.display = 'none'
+}
+
+function mostrarEstadisticas(estadisticas){
+    const div = document.querySelector('.informacion')
+    div.style.display = 'block'
+
+    const texto = document.querySelector('.informacion h2')
+    texto.innerHTML = `Victoria ${estadisticas.ganador.toUpperCase()}`
+
+    const mvps = document.querySelector('.destacados')
+    mvps.style.display = 'block'
+
+    const parrafo = document.querySelectorAll('.informacion p')
+    let tiempo = {
+        minutos: generadorTiempoDeJuego() + 15,
+        segundos: generadorTiempoDeJuego()
+    }
+    parrafo[0].innerHTML = `Tiempo de juego ${tiempo.minutos}:${tiempo.segundos}`
+    parrafo[1].innerHTML = ` Kills Radiant ${estadisticas.killsRadiant} - Kills Dire ${estadisticas.killsDire}`
+
+    elegirHeroesDestacados(estadisticas.ganador)
+}
+
 const btnJugar = document.getElementById('jugar')
 const btnEstadisticas = document.getElementById('estadisticas')
 btnEstadisticas.disabled = true
 
 btnJugar.addEventListener('click', () => {
+    ocultarEstadisticas()
     mostrarTablero()
     obtenerHeroes()
 })
