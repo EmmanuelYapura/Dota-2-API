@@ -121,6 +121,42 @@ function generadorTiempoDeJuego(){
     return Math.ceil(Math.random() * 60)
 }
 
+function elegirHeroesDestacados(ganador){
+    const cartasHeroes = document.querySelectorAll(`.team-${ganador} .card`) /* los 5 divs del ganador */
+    let mvpId = generadorMvp()
+
+    const mvp = {
+        nombre: cartasHeroes[mvpId].querySelector('.card-name').textContent,
+        url: cartasHeroes[mvpId].querySelector('img').src,
+        stats: cartasHeroes[mvpId].querySelector('.stats p').textContent
+    } 
+
+    const $div = document.querySelector('.destacados')
+
+    const contenedor = document.createElement('div')
+    contenedor.classList.add('card-mvp')
+
+    const textoMvp = document.createElement('p')
+    textoMvp.innerHTML = `<i> MVP de la partida </i>`
+
+    const img = document.createElement('img')
+    img.src = mvp.url
+
+    const nombre = document.createElement('h2')
+    nombre.innerText = mvp.nombre
+
+    const stats = document.createElement('p')
+    stats.innerText = mvp.stats 
+
+    contenedor.appendChild(textoMvp)
+    contenedor.appendChild(img)
+    contenedor.appendChild(nombre)
+    contenedor.appendChild(stats)
+
+    $div.appendChild(contenedor)
+
+}
+
 const btnJugar = document.getElementById('jugar')
 const btnEstadisticas = document.getElementById('estadisticas')
 btnEstadisticas.disabled = true
