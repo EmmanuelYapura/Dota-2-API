@@ -79,3 +79,15 @@ function generadorKDA(){
 
     return texto
 }
+
+const btnJugar = document.getElementById('jugar')
+const btnEstadisticas = document.getElementById('estadisticas')
+btnEstadisticas.disabled = true
+
+btnJugar.addEventListener('click', () => {
+    obtenerHeroes()
+})
+
+
+btnEstadisticas.addEventListener('click', () => {
+})
