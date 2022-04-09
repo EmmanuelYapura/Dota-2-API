@@ -80,14 +80,27 @@ function generadorKDA(){
     return texto
 }
 
+function mostrarTablero(){
+    const tablero = document.querySelector('.tablero')
+    tablero.style.display = 'block'
+    tablero.style.backgroundImage = "url('./imagenes/mapa-dota2.jpg')"
+}
+
+function ocultarTablero(){
+    const tablero = document.querySelector('.tablero')
+    tablero.style.display = 'none'
+}
+
 const btnJugar = document.getElementById('jugar')
 const btnEstadisticas = document.getElementById('estadisticas')
 btnEstadisticas.disabled = true
 
 btnJugar.addEventListener('click', () => {
+    mostrarTablero()
     obtenerHeroes()
 })
 
 
 btnEstadisticas.addEventListener('click', () => {
+    ocultarTablero()
 })
