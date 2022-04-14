@@ -25,7 +25,7 @@ function cargaTablero(heroes){
 function genedadorArrayIds(){
     let array = []
     for (let i = 0; i < 10; i++) { 
-        let id = generadorIdHeroe()
+        let id = generadorNumeroAleatorio(124)
         if(array.includes(id)){
             id = id + 1
         }
@@ -34,8 +34,8 @@ function genedadorArrayIds(){
     return array
 }
 
-function generadorIdHeroe(){
-    return Math.floor(Math.random() * 124)
+function generadorNumeroAleatorio(maximo){  /* Modificar */
+    return Math.floor(Math.random() * maximo)
 }
 
 async function cargaDatos(heroe,id){
@@ -63,7 +63,7 @@ async function cargaDatos(heroe,id){
     const textoKDA = document.querySelector(`.card-results-${id} p`)
     textoKDA.innerHTML = 'Cargando k/d/a...'
     await retardo()
-    textoKDA.innerHTML = generadorKDA()
+    textoKDA.innerHTML = generadorKDA() 
 
 }
 
@@ -71,10 +71,10 @@ function retardo(time = 2000){
     return new Promise (resolve => setTimeout(resolve, time))
 }
 
-function generadorKDA(){
-    let k = Math.floor(Math.random() * 30)
-    let d = Math.floor(Math.random() * 22)
-    let a = Math.floor(Math.random() * 30)
+function generadorKDA(){ 
+    let k = generadorNumeroAleatorio(30)  
+    let d = generadorNumeroAleatorio(22) 
+    let a = generadorNumeroAleatorio(30)  
     const texto = `${k} / ${d} / ${a}`  
 
     return texto
@@ -108,8 +108,8 @@ function mostrarEstadisticas(estadisticas){
 
     const parrafo = document.querySelectorAll('.informacion p')
     let tiempo = {
-        minutos: generadorTiempoDeJuego() + 15,
-        segundos: generadorTiempoDeJuego()
+        minutos: generadorNumeroAleatorio(60) + 15, 
+        segundos: generadorNumeroAleatorio(60) + 10
     }
     parrafo[0].innerHTML = `Tiempo de juego ${tiempo.minutos}:${tiempo.segundos}`
     parrafo[1].innerHTML = ` Kills Radiant ${estadisticas.killsRadiant} - Kills Dire ${estadisticas.killsDire}`
@@ -117,13 +117,10 @@ function mostrarEstadisticas(estadisticas){
     elegirHeroesDestacados(estadisticas.ganador)
 }
 
-function generadorTiempoDeJuego(){
-    return Math.ceil(Math.random() * 60)
-}
 
 function elegirHeroesDestacados(ganador){
     const cartasHeroes = document.querySelectorAll(`.team-${ganador} .card`)
-    let mvpId = generadorMvp()
+    let mvpId = generadorNumeroAleatorio(5)
 
     const mvp = {
         nombre: cartasHeroes[mvpId].querySelector('.card-name').textContent,
@@ -155,10 +152,6 @@ function elegirHeroesDestacados(ganador){
 
     $div.appendChild(contenedor)
 
-}
-
-function generadorMvp(){
-    return Math.floor(Math.random() * 5)
 }
 
 function obtenerGanador(){
