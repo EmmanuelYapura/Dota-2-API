@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dota 2 API</title>
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+
+    <div class="encabezado">
+        <header>
+            <h1>Defense of the Ancients II</h1>
+        </header>
+
+        <div class="controles">
+            <button id="jugar">Jugar</button>
+            <button id="estadisticas" >Estadisticas</button>
+        </div>
+    </div>
+
+    <div class="informacion">
+        <h2></h2>
+        <p></p>
+        <p>Dota 2 es un videojuego perteneciente al género de Arena de batalla en línea ARTS («estrategia de acción en
+            tiempo real»), también conocido como MOBA, lanzado el 9 de julio del año 2013. El juego fue desarrollado por
+            la empresa Valve Corporation. El título fue anunciado oficialmente el 13 de octubre de 2010, en un artículo
+            en el sitio web Game Informer;1​ posteriormente, entró en su etapa Beta a principios del 2011, y finalmente
+            se lanzó al público en general a través de Steam el 9 de julio de 2013 para Microsoft Windows, y el 18 de
+            julio de 2013 para OS X y Linux, el 17 de junio de 2015 Valve lanzó la beta del juego usando el nuevo motor
+            gráfico Source 2 [Dota 2 Reborn], cliente que será el único y definitivo poco después del The International
+            2015 según el anuncio se mantuvo fiel a su predecesor, a la vez que incrementó la calidad del producto
+            final, además de ofrecer una experiencia envolvente y gratificante para los jugadores. Sin embargo, Dota 2
+            es actualmente criticado por tener una dura curva de aprendizaje y una comunidad de las más hostiles en el
+            ámbito de internet. Actualmente es el juego más jugado de Steam con más de 40.6 millones de jugadores2​
+            únicos que se conectan casi en su totalidad con frecuencia diaria3​ y ha llegado a ser incluido en el
+            Guinness World Records Gamer's Edition.
+            <br>
+            <br>
+            Valve Corporation organiza de manera anual el campeonato mundial El Internacional, que en su primera edición
+            fue jugado en la ciudad de Colonia, en Alemania, en el año 2011. La edición de 2015 en el Key Arena
+            (Seattle, Estados Unidos) repartió una cantidad 18.429.613 USD$5​ y en la edición de 2016 se repartieron
+            unos $20,770,460 USD$.6​ Actualmente el The International es el torneo anual de e-sports que más dinero
+            entrega en premios.7​ También otro torneo importante que organiza Valve Corporation son las llamadas
+            Majors,8​ las cuales empezaron en noviembre de 2015, siendo tres al año y entregando $3,000,000 USD en
+            premios.9​El año 2017 el premio al mejor equipo de Dota 2 fue de $10,862,683 para el equipo ganador.
+        </p>
+        <div class="destacados"></div>
+    </div>
+
+    <div class="tablero">
+
+
+        <div class="team-radiant vista">
+
+            <div class="card">
+                <img src="" id="img-hero-1" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-1"></h5> <img src="" class="icon-hero" id="icon-hero-1"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-1"></li>
+                    <li id="base-int-1"></li>
+                    <li id="base-str-1"></li>
+                    <li id="base-attack-1"></li>
+                </ul>
+                <div class="card-results-1 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-2" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-2"></h5> <img src="" class="icon-hero" id="icon-hero-2"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-2"></li>
+                    <li id="base-int-2"></li>
+                    <li id="base-str-2"></li>
+                    <li id="base-attack-2"></li>
+                </ul>
+                <div class="card-results-2 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-3" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-3"></h5> <img src="" class="icon-hero" id="icon-hero-3"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-3"></li>
+                    <li id="base-int-3"></li>
+                    <li id="base-str-3"></li>
+                    <li id="base-attack-3"></li>
+                </ul>
+                <div class="card-results-3 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-4" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-4"></h5> <img src="" class="icon-hero" id="icon-hero-4"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-4"></li>
+                    <li id="base-int-4"></li>
+                    <li id="base-str-4"></li>
+                    <li id="base-attack-4"></li>
+                </ul>
+                <div class="card-results-4 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-5" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-5"></h5> <img src="" class="icon-hero" id="icon-hero-5"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-5"></li>
+                    <li id="base-int-5"></li>
+                    <li id="base-str-5"></li>
+                    <li id="base-attack-5"></li>
+                </ul>
+                <div class="card-results-5 stats">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="team-dire vista">
+            <div class="card">
+                <img src="" id="img-hero-6" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-6"></h5> <img src="" class="icon-hero" id="icon-hero-6"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-6"></li>
+                    <li id="base-int-6"></li>
+                    <li id="base-str-6"></li>
+                    <li id="base-attack-6"></li>
+                </ul>
+                <div class="card-results-6 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-7" alt="Hero">
+                <div class="card-body">
+                    <h5 id="nombre-hero-7" class="card-name"></h5> <img src="" class="icon-hero" id="icon-hero-7"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-7"></li>
+                    <li id="base-int-7"></li>
+                    <li id="base-str-7"></li>
+                    <li id="base-attack-7"></li>
+                </ul>
+                <div class="card-results-7 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-8" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-8"></h5> <img src="" class="icon-hero" id="icon-hero-8"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-8"></li>
+                    <li id="base-int-8"></li>
+                    <li id="base-str-8"></li>
+                    <li id="base-attack-8"></li>
+                </ul>
+                <div class="card-results-8 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-9" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-9"></h5> <img src="" class="icon-hero" id="icon-hero-9"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-9"></li>
+                    <li id="base-int-9"></li>
+                    <li id="base-str-9"></li>
+                    <li id="base-attack-9"></li>
+                </ul>
+                <div class="card-results-9 stats">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="" id="img-hero-10" alt="Hero">
+                <div class="card-body">
+                    <h5 class="card-name" id="nombre-hero-10"></h5> <img src="" class="icon-hero" id="icon-hero-10"
+                        alt="icono">
+
+                </div>
+                <ul class="card-stats">
+                    <li id="base-agi-10"></li>
+                    <li id="base-int-10"></li>
+                    <li id="base-str-10"></li>
+                    <li id="base-attack-10"></li>
+                </ul>
+                <div class="card-results-10 stats">
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
