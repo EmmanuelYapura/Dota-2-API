@@ -30,7 +30,8 @@ header h1{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px;
+    padding-top: 30px;
+    margin-bottom: 150px;
 }
 
 .team-dire{
@@ -38,6 +39,7 @@ header h1{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 button{
